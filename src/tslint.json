@@ -12,6 +12,11 @@
             "element",
             "app",
             "kebab-case"
+        ],
+        "no-any": true,
+        "semicolon": [
+            true,
+            "always"
         ]
     }
 }
