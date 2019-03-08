@@ -1,3 +1,31 @@
-<p>
-  sidebar-menu works!
-</p>
+<mat-nav-list>
+  <div *ngFor="let item of menu; let i = index">
+    <mat-accordion *ngIf="item.children">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>{{item.icon}}</mat-icon>
+            {{item.name}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let submenu of item.children">
+          <mat-list-item>
+            <div mat-list-text class="mat-body-2">
+              {{ submenu.name}}
+              <span matBadge="{{submenu.count}}" matBadgeOverlap="false"
+                matBadgeColor="{{submenu.badge}}">{{submenu.badge}}</span>
+            </div>
+          </mat-list-item>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <mat-list-item *ngIf="item.path">
+      <mat-icon>{{ item.icon}}</mat-icon>
+      <div mat-list-text class="mat-body-2">
+        {{ item.name}}
+      </div>
+    </mat-list-item>
+  </div>
+  <mat-list-item>
+  </mat-list-item>
+</mat-nav-list>

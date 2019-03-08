@@ -8,6 +8,8 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+
 
   ],
   providers: [],

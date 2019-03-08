@@ -1,3 +1,15 @@
-<app-toolbar></app-toolbar>
-<app-sidebar-container></app-sidebar-container>
-<app-sidebar-menu></app-sidebar-menu>
+<app-toolbar (toggle)="toggle()"></app-toolbar>
+<mat-sidenav-container class="app-container">
+    <mat-sidenav [opened]="true" [fixedInViewport]="true" [mode]="'side'" class="lesson-list-sidenav" fixedTopGap="64"
+        #MenuSidenav>
+        <app-sidebar-menu></app-sidebar-menu>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        qsdqdqdqsdqsdqsdqsdbr <br>
+        qsdqqdqsfsdf
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- <app-sidebar-container></app-sidebar-container>  -->
+<!--[mode]="sidenavMode" [fixedInViewport]="true"-->

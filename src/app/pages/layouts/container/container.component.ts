@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-container',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit {
-
+  @ViewChild('MenuSidenav') MenuSidenav: any;
   constructor() { }
 
+
   ngOnInit() {
+  }
+
+  toggle() {
+    this.MenuSidenav.toggle();
   }
 
 }
